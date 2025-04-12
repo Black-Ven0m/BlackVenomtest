@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLACK VENOM | ∆VNM▲GØD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    /* Basic Body and Font Styling */
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: #121212;
+      color: #00ff88;
+      overflow-x: hidden;
+      animation: fadeIn 2s ease-in;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Binary Animation Background */
+    .binary-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      color: #00ff88;
+      font-size: 2rem;
+      line-height: 1.5;
+      white-space: nowrap;
+      z-index: -1;
+      animation: binaryAnimation 0.5s infinite linear;
+    }
+
+    @keyframes binaryAnimation {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+
+    .binary-background span {
+      display: inline-block;
+      padding: 0.5em;
+      opacity: 0.2;
+    }
+
+    header {
+      text-align: center;
+      padding: 2em 1em;
+      background: linear-gradient(to right, #000, #111);
+      border-bottom: 2px solid #00ff88;
+    }
+    header h1 {
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+    .tagline {
+      font-size: 1em;
+      color: #00ffaa;
+    }
+    section {
+      padding: 2em;
+    }
+    .module {
+      background: #111;
+      margin: 1em 0;
+      padding: 1em;
+      border-left: 3px solid #00ff88;
+      transition: transform 0.3s ease;
+    }
+    .module:hover {
+      transform: scale(1.02);
+    }
+    .module h3 {
+      margin-top: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.8em;
+      color: #00ffaa;
+      border-top: 1px solid #00ffaa;
+      background-color: #000;
+    }
+    nav {
+      background: #000;
+      border-bottom: 1px solid #00ffaa;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      color: #00ff88;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Countdown Timer */
+    .countdown {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ff4444;
+      margin-top: 1em;
+    }
+
+    /* Social Links */
+    .social-links a {
+      color: #00ffaa;
+      margin-right: 1em;
+    }
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Binary Background -->
+  <div class="binary-background">
+    <span>0</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span>
+    <span>1</span><span>0</span><span>1</span><span>0</span><span>1</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span>
+    <!-- Add more binary digits as needed -->
+  </div>
+
+  <header>
+    <h1>BLACK VENOM</h1>
+    <p class="tagline">Welcome ZEROHEX | ∆VNM▲GØD (Founder) | Protocol ∆404X</p>
+  </header>
+
+  <nav>
+    <a href="#core">Modules</a>
+    <a href="#zerohex">ZEROHEX</a>
+    <a href="#missions">Missions</a>
+    <a href="#contact">Contact</a>
+    <a href="#social">Social</a>
+  </nav>
+
+  <section id="core">
+    <div class="module">
+      <h3>CORE MODULES</h3>
+      <ul>
+        <li>VENOM-MAILER - Email Payload Tester</li>
+        <li>VENOM-TGX GUI - Telegram Spammer Suite</li>
+        <li>VNM-WATCHDOG - System Alert Monitor</li>
+        <li>CONTROL PANEL - Real-Time Terminal Access</li>
+        <li>BLACK VENOM APP - Android Suite with KivyMD</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="zerohex">
+    <div class="module">
+      <h3>ELITE UNIT: ZEROHEX</h3>
+      <p>ZEROHEX is the founder of BLACK VENOM and the leader of the inner circle. Members handle deepnet scans, offensive scripts, and classified ops. Entry by invitation only.</p>
+    </div>
+  </section>
+
+  <section id="missions">
+    <div class="module">
+      <h3>MISSION CONTROL</h3>
+      <ul>
+        <li>Challenge 001: Payload Injection in Controlled Environment</li>
+        <li>Challenge 002: Telegram Bot Spam Defense</li>
+        <li>Challenge 003: Resource Hijack Detection (WATCHDOG)</li>
+      </ul>
+      <!-- Countdown Timer -->
+      <div class="countdown" id="countdown"></div>
+    </div>
+  </section>
+
+  <section id="social">
+    <div class="module">
+      <h3>CONNECT WITH BLACK VENOM</h3>
+      <p>Follow us on:</p>
+      <div class="social-links">
+        <a href="https://t.me/BlackVen0mBot" target="_blank">Telegram</a>
+        <a href="https://github.com/black-ven0m" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="module">
+      <h3>CONTACT & DEPLOYMENT</h3>
+      <p>GitHub: <a href="https://github.com/black-ven0m" target="_blank" style="color:#00ffaa;">black-ven0m</a></p>
+      <p>Telegram Bot: @BlackVen0mBot</p>
+      <p>Command Signature: ∆VNM▲GØD</p>
+    </div>
+  </section>
+
+  <footer>
+    Signed by ∆VNM▲GØD | BLACK VENOM 2025 © All Rights Reserved
+  </footer>
+
+  <!-- Countdown Timer Script -->
+  <script>
+    const countdownDate = new Date("2025-12-31T23:59:59Z").getTime();
+    const countdown = document.getElementById("countdown");
+
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(interval);
+        countdown.innerHTML = "MISSION COMPLETED";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
