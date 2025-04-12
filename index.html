@@ -1,12 +1,3 @@
-# Let's enhance the website with the requested features:
-# 1. Interactive Cyber Challenges Section
-# 2. Live Cybersecurity Stats Section
-# 3. Leaderboard with Points System
-# 4. Interactive Hacking Map
-# 5. Future Missions & Goals Section
-# 6. Member Contributions Section
-
-html_code_final_with_all_features = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,302 +8,256 @@ html_code_final_with_all_features = """
         body {
             margin: 0;
             padding: 0;
-            background-color: #000;
+            background-color: #121212;
             font-family: 'Arial', sans-serif;
             color: #fff;
-            overflow: hidden;
-            transition: background-color 0.3s ease;
-        }
-        
-        h1, h2 {
             text-align: center;
-            font-size: 5em;
+        }
+
+        h1, h2 {
+            font-size: 3.5em;
             text-transform: uppercase;
-            letter-spacing: 8px;
-            color: #FF1493; /* Hot Pink */
-            text-shadow: 0 0 30px #FF1493, 0 0 40px #FF1493, 0 0 50px #FF1493;
-            animation: pulse 1.5s infinite alternate;
-        }
-
-        h2 {
-            color: #00FF00; /* Neon Green */
-            text-shadow: 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 50px #00FF00;
-        }
-
-        @keyframes pulse {
-            0% { text-shadow: 0 0 30px #FF1493, 0 0 40px #FF1493; }
-            50% { text-shadow: 0 0 20px #00FF00, 0 0 30px #00FF00; }
-            100% { text-shadow: 0 0 30px #FF1493, 0 0 40px #FF1493; }
+            color: #FF1493;
+            text-shadow: 0 0 20px #FF1493, 0 0 30px #FF1493;
         }
 
         .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            animation: zoomIn 2s infinite alternate;
+            margin-top: 50px;
         }
 
-        .pulse-effect {
-            animation: pulse 2s infinite;
+        .section {
+            background-color: #1e1e1e;
+            padding: 50px 20px;
+            margin: 30px 0;
+            border-radius: 10px;
         }
 
-        @keyframes zoomIn {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
+        .section h2 {
+            font-size: 2.5em;
+            color: #00FF00;
+            text-shadow: 0 0 20px #00FF00, 0 0 30px #00FF00;
+        }
+
+        .section p, .section ul {
+            font-size: 1.2em;
+            color: #b3b3b3;
         }
 
         .button {
             background-color: #FF4500;
             border: none;
+            padding: 15px 30px;
             color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
+            font-size: 1.2em;
             cursor: pointer;
-            border-radius: 12px;
-            box-shadow: 0 0 15px #FF4500;
-            transition: 0.3s;
+            border-radius: 5px;
+            transition: 0.3s ease;
         }
 
         .button:hover {
             background-color: #00FF00;
-            box-shadow: 0 0 25px #00FF00;
-        }
-
-        .about-section, .tools-section, .mission-section, .leaderboard-section, .challenges-section, .stats-section, .contributions-section, .future-missions-section {
-            background-color: #222;
-            padding: 50px;
-            text-align: center;
-            color: #fff;
-        }
-
-        .about-section h2, .tools-section h2, .mission-section h2, .leaderboard-section h2, .challenges-section h2, .stats-section h2, .contributions-section h2, .future-missions-section h2 {
-            font-size: 3em;
-            color: #FF1493;
-            text-shadow: 0 0 30px #FF1493, 0 0 40px #FF1493;
-        }
-
-        .about-section p, .tools-section ul, .mission-section p, .leaderboard-section ul, .challenges-section p, .stats-section p, .contributions-section p, .future-missions-section p {
-            font-size: 1.5em;
-            line-height: 1.6;
-            color: #00FF00;
-        }
-
-        .tools-section ul, .leaderboard-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .tools-section li, .leaderboard-section li {
-            font-size: 1.5em;
-            margin: 10px;
-            color: #FF4500;
+            box-shadow: 0 0 10px #00FF00;
         }
 
         .footer {
-            position: fixed;
-            bottom: 10px;
-            width: 100%;
+            background-color: #1e1e1e;
+            padding: 20px;
             text-align: center;
             color: #aaa;
-            font-size: 1.2em;
-            font-weight: bold;
         }
 
-        .footer a {
-            color: #FF4500;
-            text-decoration: none;
-            animation: blink 1.5s infinite alternate;
-        }
-
-        @keyframes blink {
-            50% { opacity: 0; }
-        }
-
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://i.imgur.com/7JgmnXk.gif') no-repeat center center fixed;
-            background-size: cover;
-            opacity: 0.7;
-            animation: backgroundMove 8s infinite linear;
-        }
-
-        @keyframes backgroundMove {
-            0% { transform: scale(1.1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1.1); }
-        }
-
-        #dark-mode-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
+        .contact-form input, .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
             background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 8px;
-            box-shadow: 0 0 10px #FF4500;
-            transition: 0.3s;
+            color: white;
+            border: none;
+            border-radius: 5px;
         }
 
-        #dark-mode-toggle:hover {
+        .contact-form button {
             background-color: #FF4500;
+            padding: 15px 30px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
-        .news-feed {
-            background-color: #000;
-            color: #FF1493;
-            padding: 20px;
-            max-height: 200px;
-            overflow-y: scroll;
-            margin: 20px auto;
-            width: 90%;
+        .contact-form button:hover {
+            background-color: #00FF00;
         }
 
-        .challenges-section {
-            background-color: #333;
-            padding: 50px;
-            text-align: center;
-        }
-
-        .challenges-section ul {
+        /* Leaderboard and Rankings */
+        .leaderboard ul {
             list-style: none;
             padding: 0;
         }
 
-        .challenges-section li {
+        .leaderboard li {
             font-size: 1.5em;
-            margin: 10px;
-            color: #FF4500;
+            color: #FF1493;
+            margin: 10px 0;
         }
 
-        .stats-section {
-            background-color: #222;
-            padding: 50px;
-            text-align: center;
+        .map {
+            width: 80%;
+            height: 300px;
+            background-color: #333;
+            margin: 20px 0;
         }
 
-        .future-missions-section {
-            background-color: #222;
-            padding: 50px;
-            text-align: center;
+        .testimonial {
+            font-style: italic;
+            color: #00FF00;
+            margin: 20px 0;
         }
 
-        .contributions-section {
-            background-color: #444;
-            padding: 50px;
-            text-align: center;
+        /* Custom Media Player for Podcasts or Video Series */
+        .media-player {
+            background-color: #333;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
         }
+
     </style>
 </head>
 <body>
 
-    <div class="background"></div>
-
     <div class="container">
         <h1>BLACK VENOM</h1>
         <h2>∆VNM▲GØD</h2>
-        <p class="pulse-effect">Welcome to the Cyber Revolution</p>
-        <a href="#about" class="button">About Us</a>
-        <a href="#tools" class="button">Explore Tools</a>
-        <a href="#mission" class="button">Current Mission</a>
-        <a href="#leaderboard" class="button">Leaderboard</a>
-        <a href="#challenges" class="button">Cyber Challenges</a>
-        <a href="#stats" class="button">Live Stats</a>
-        <a href="#future-missions" class="button">Future Missions</a>
-        <a href="#contributions" class="button">Member Contributions</a>
-    </div>
 
-    <div class="about-section" id="about">
-        <h2>About BLACK VENOM</h2>
-        <p>BLACK VENOM is the ultimate hacking group led by <strong>ZEROHEX</strong> (∆VNM▲GØD). Our mission is to breach the highest levels of cyber defense and dominate the digital world. We expose vulnerabilities, develop new tools, and challenge the boundaries of cybersecurity.</p>
-        <p>Our work is the fusion of technology and chaos. The digital world trembles as we move silently in the shadows, creating a storm in the cyber domain.</p>
-    </div>
+        <!-- About Section -->
+        <div class="section" id="about">
+            <h2>About BLACK VENOM</h2>
+            <p>BLACK VENOM is an elite hacking group founded by ZEROHEX (∆VNM▲GØD), dedicated to breaking barriers in the digital world. Our mission is to expose vulnerabilities, create powerful tools, and engage in cyber warfare at the highest level.</p>
+        </div>
 
-    <div class="tools-section" id="tools">
-        <h2>Our Elite Tools</h2>
-        <ul>
-            <li>VENOM-MAILER: Powerful email spam tool for penetration testing</li>
-            <li>VNM-WATCHDOG: Advanced real-time system monitor for threat detection</li>
-            <li>INJECT TGX-GUI: Telegram spamming tool with easy-to-use interface</li>
-            <li>ZEROHEX HACKING SUITE: Comprehensive set of elite hacking tools</li>
-        </ul>
-    </div>
+        <!-- Mission Statement Section -->
+        <div class="section" id="mission">
+            <h2>Our Mission</h2>
+            <p>At BLACK VENOM, our mission is to push the boundaries of digital security, uncovering vulnerabilities, and challenging the status quo. We aim to empower our members with knowledge and tools to thrive in the world of ethical hacking and cybersecurity.</p>
+        </div>
 
-    <div class="mission-section" id="mission">
-        <h2>Current Mission</h2>
-        <p>We are currently engaged in testing high-profile systems, exploiting vulnerabilities in advanced firewalls, and working on enhancing our hacking suite with new exploits.</p>
-        <p>Mission Status: <span style="color: #FF1493;">Ongoing</span></p>
-    </div>
+        <!-- News Section -->
+        <div class="section" id="news">
+            <h2>Latest News</h2>
+            <ul>
+                <li>April 2025: New tool release - VENOM-MAILER V2.0</li>
+                <li>March 2025: BLACK VENOM successfully infiltrates a global financial system.</li>
+                <li>February 2025: Team expansion! We welcome new members to the elite core group.</li>
+            </ul>
+        </div>
 
-    <div class="leaderboard-section" id="leaderboard">
-        <h2>Leaderboard</h2>
-        <ul>
-            <li><strong>∆VNM▲GØD</strong> - Leader</li>
-            <li><strong>VENOM-X</strong> - Senior Hacker</li>
-            <li><strong>BLACKNITE</strong> - Developer</li>
-            <li><strong>SHADOWBYTE</strong> - Researcher</li>
-        </ul>
-    </div>
+        <!-- Tools Section -->
+        <div class="section" id="tools">
+            <h2>Our Tools & Resources</h2>
+            <p>We use a wide range of cutting-edge tools for penetration testing and cyber exploration:</p>
+            <ul>
+                <li>VENOM-MAILER - Powerful email spamming tool</li>
+                <li>VNM-WATCHDOG - Real-time system monitor</li>
+                <li>INJECT TGX-GUI - Telegram spammer tool</li>
+            </ul>
+        </div>
 
-    <div class="challenges-section" id="challenges">
-        <h2>Cyber Challenges</h2>
-        <ul>
-            <li>Decrypt the encrypted message.</li>
-            <li>Find the vulnerability in the firewall code.</li>
-            <li>Complete the Capture the Flag challenge!</li>
-        </ul>
-    </div>
+        <!-- Member Profile Showcase -->
+        <div class="section" id="members">
+            <h2>Top Members</h2>
+            <ul>
+                <li>ZEROHEX - 5000 Points</li>
+                <li>Viper - 4500 Points</li>
+                <li>VenomX - 4000 Points</li>
+            </ul>
+        </div>
 
-    <div class="stats-section" id="stats">
-        <h2>Live Cybersecurity Stats</h2>
-        <p>Active Vulnerabilities: 247</p>
-        <p>Recent Data Breaches: 3</p>
-        <p>Ongoing Cyberattacks: 12</p>
-    </div>
+        <!-- Media Gallery Section -->
+        <div class="section" id="media">
+            <h2>Media Gallery</h2>
+            <p>Check out our media from various hacking events and achievements:</p>
+            <img src="media1.jpg" alt="Event Image" style="width: 300px; height: auto; margin: 10px;">
+            <img src="media2.jpg" alt="Tool Usage" style="width: 300px; height: auto; margin: 10px;">
+        </div>
 
-    <div class="future-missions-section" id="future-missions">
-        <h2>Future Missions & Goals</h2>
-        <p>We are planning to launch a new DDoS attack simulation tool.</p>
-        <p>Next mission: Infiltrate and analyze a global banking system.</p>
-    </div>
+        <!-- Contact/Support Form -->
+        <div class="section" id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any inquiries or need assistance, reach out to us:</p>
+            <div class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </div>
+        </div>
 
-    <div class="contributions-section" id="contributions">
-        <h2>Member Contributions</h2>
-        <p>Members can submit their exploits, tools, and research here.</p>
-        <p><strong>Submit your contributions to help the team!</strong></p>
+        <!-- Live Stats Section -->
+        <div class="section" id="stats">
+            <h2>Live Cyber Stats</h2>
+            <p>Active Exploits: 15</p>
+            <p>Systems Compromised: 200+</p>
+        </div>
+
+        <!-- Dark Web Section -->
+        <div class="section" id="dark-web">
+            <h2>Dark Web Tools</h2>
+            <p>Explore the deep web and unlock secret tools that only BLACK VENOM members have access to.</p>
+        </div>
+
+        <!-- Hacking Tutorials Section -->
+        <div class="section" id="tutorials">
+            <h2>Hacking Tutorials</h2>
+            <p>Learn and master ethical hacking techniques through our exclusive tutorials:</p>
+            <ul>
+                <li><a href="tutorial1.html">How to Bypass Firewalls</a></li>
+                <li><a href="tutorial2.html">Penetration Testing 101</a></li>
+                <li><a href="tutorial3.html">Exploit Development</a></li>
+            </ul>
+        </div>
+
+        <!-- Event Calendar Section -->
+        <div class="section" id="events">
+            <h2>Upcoming Events</h2>
+            <p>Join our next challenge or group event:</p>
+            <ul>
+                <li>May 2025: Global Cyber Challenge</li>
+                <li>June 2025: Penetration Testing Webinar</li>
+            </ul>
+        </div>
+
+        <!-- Testimonial Section -->
+        <div class="section" id="testimonials">
+            <h2>Member Success Stories</h2>
+            <div class="testimonial">
+                <p>"Thanks to BLACK VENOM, I've mastered the art of ethical hacking and cracked some of the toughest systems!" - Viper</p>
+            </div>
+        </div>
+
+        <!-- Media Player for Podcast or Video Series -->
+        <div class="section" id="media-player">
+            <h2>Watch Our Latest Episode</h2>
+            <div class="media-player">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Real-Time Chat Section -->
+        <div class="section" id="chat">
+            <h2>Live Chat</h2>
+            <p>Join the real-time discussion in our chat room.</p>
+            <div class="chatbox">
+                <!-- Embed Chat Here -->
+            </div>
+        </div>
+
+        <a href="https://t.me/BlackVenomGroup" class="button">Join the Revolution</a>
     </div>
 
     <div class="footer">
-        <p>Join the revolution in cybersecurity.</p>
-        <a href="https://github.com/black-ven0m">GitHub</a> | <a href="#">Telegram</a>
+        <p>&copy; 2025 BLACK VENOM. All rights reserved.</p>
     </div>
-
-    <script>
-        // Dark mode toggle functionality
-        document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
 
 </body>
 </html>
-"""
-
-# Save the HTML content to a file
-file_path = '/mnt/data/black_venom_website_with_all_features.html'
-with open(file_path, 'w') as file:
-    file.write(html_code_final_with_all_features)
-
-file_path
